@@ -14,7 +14,7 @@ Each customer type is handled by a separate class, making it easy to extend or m
 The application is tested through unit tests to demonstrate correct and distinct email outputs for each customer type.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/sruju333/cs-665-assignment-3
 
 # Implementation Description 
 

@@ -40,19 +40,13 @@ public class Main {
       Customer customer = new Customer(name, kind);
       Email email = engine.compose(customer);
       System.out.println();
-      printEmail(email);
+
+      System.out.println("---- Generated Email ----");
+      System.out.println("Subject: " + email.getSubject() + "\n");
+      System.out.println(email.getBody());
+      System.out.println("-------------------------");
+
       sc.close();
   }
-
-    /**
-     * This method prints to console the Email Subject and Body relative to the Customer Type
-     * @param email object containing email subject and body details
-     */
-    private static void printEmail(Email email) {
-        System.out.println("---- Generated Email ----");
-        System.out.println("Subject: " + email.getSubject() + "\n");
-        System.out.println(email.getBody());
-        System.out.println("-------------------------");
-    }
 
 }
