@@ -38,19 +38,19 @@ easy for others to read and maintain.
 The implementation uses straightforward Java constructs - classes, an interface, and an enum - without introducing unnecessary complexity.
 Class and method names are self-explanatory (MailEngine, TemplateStrategy, CustomerKind, etc.), ensuring that the code can be easily understood by others or maintained in the future.
 Each class has a single, clear responsibility:
-Customer — represents the customer data.
-Email — encapsulates the final output.
-TemplateStrategy — defines the email creation contract.
+Customer - represents the customer data.
+Email - encapsulates the final output.
+TemplateStrategy - defines the email creation contract.
 Five concrete strategy classes (Business, Returning, Frequent, New, Vip) - provide the actual logic.
-MailEngine — acts as the central coordinator or context.
-Main — simple command-line client for user interaction.
+MailEngine - acts as the central coordinator or context.
+Main - simple command-line client for user interaction.
 
 - Describe how you have avoided duplicated code and why it is important.
 
 Duplicate logic was intentionally avoided:
 Common operations (such as creating and composing emails) are centralized inside the MailEngine context class.
 Shared structure (subjectFor, bodyFor methods) is defined once in the interface and reused across strategies.
-Repetition across email generation methods is limited to only what differs — the specific subject and body content per segment.
+Repetition across email generation methods is limited to only what differs - the specific subject and body content per segment.
 This minimizes redundancy and ensures that a change in one area (e.g., renaming a method or changing an output format) does not require updates across multiple files.
 
 Avoiding duplicate code enhances maintainability, testability, and reduces the chance of inconsistencies or bugs caused by uncoordinated edits.
